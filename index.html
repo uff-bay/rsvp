@@ -21,8 +21,8 @@
           To participate, you (or, if you are below the age of 18, your guardian) will need to sign both waiver forms.
         </p>
         <ol>
-          <li><a id="waiverA" href="#" target="https://docs.google.com/document/d/1sXZhdfVdP9XuHrxpnfPpmX7cc_7qufwyuFZ9bzW3b0Y/view" rel="noopener">City of Newark Waiver Form</a></li>
-          <li><a id="waiverB" href="#" target="https://drive.google.com/file/d/1a65lmS7rAJBmiO2hR0xzdyUoIWDTKkAq/view" rel="noopener">UFF Waiver Form</a></li>
+          <li><a id="waiverA" href="#" target="_blank" rel="noopener">City of Newark Waiver Form</a></li>
+          <li><a id="waiverB" href="#" target="_blank" rel="noopener">UFF Waiver Form</a></li>
         </ol>
         <p>
           You can submit the forms in either of these ways:
@@ -68,7 +68,7 @@
 
           <fieldset>
             <legend>I am a… *</legend>
-            <label class="choice"><input type="radio" name="participant_type" value="Student (age 14+)" required> Student (age 14+)</label>
+            <label class="choice"><input type="radio" name="participant_type" value="Student" required> Student (age 14+)</label>
             <label class="choice"><input type="radio" name="participant_type" value="Adult" required> Adult</label>
           </fieldset>
 
@@ -80,16 +80,17 @@
           <fieldset>
             <legend>Do you have previous tree-planting experience? *</legend>
             <p class="help">None needed. This just helps the organizer plan.</p>
-            <label class="choice"><input type="radio" name="tree_experience" value="Yes, a lot" required> Yes, a lot</label>
-            <label class="choice"><input type="radio" name="tree_experience" value="Yes, a little" required> Yes, a little</label>
-            <label class="choice"><input type="radio" name="tree_experience" value="No" required> No</label>
+            <label class="choice"><input type="radio" name="tree_experience" value="aLot" required> Yes, a lot</label>
+            <label class="choice"><input type="radio" name="tree_experience" value="aLittle" required> Yes, a little</label>
+            <label class="choice"><input type="radio" name="tree_experience" value="None" required> No</label>
           </fieldset>
 
           <fieldset>
             <legend>How would you like to submit the waiver forms? *</legend>
-            <label class="choice"><input type="radio" name="waiver_submission" value="I will print them out physically and bring them to the event" required> I will print them out physically and bring them to the event</label>
-            <label class="choice"><input type="radio" name="waiver_submission" value="I will sign them digitally (or scan a copy) and send them to organizer" required> I will sign them digitally (or scan a copy) and send them to organizer</label>
-            <label class="choice"><input type="radio" name="waiver_submission" value="I do not have the ability to print out a form or sign electronically, and request a set of forms" required> I do not have the ability to print out a form or sign electronically, and request a set of forms</label>
+            <label class="choice"><input type="radio" name="waiver_submission" value="printMyself" required> I will print them out physically and bring them to the event</label>
+            <label class="choice"><input type="radio" name="waiver_submission" value="electronic" required> I will sign them digitally (or scan a copy) and send them to organizer</label>
+            <label class="choice"><input type="radio" name="waiver_submission" value="noAbility" required> I do not have the ability to print out a form or sign electronically, and request UFF provide me a set of forms</label>
+            <label class="choice"><input type="radio" name="waiver_submission" value="alreadySigned" required> I have previous attended an UFF tree planting at Newark and have signed both forms in the calendar year of 2026. I do not need to sign again.</label>
           </fieldset>
 
           <label>
@@ -106,6 +107,10 @@
             After you submit, you’ll be taken to a confirmation page. You will also receive an email with a self-cancel link.
           </p>
 
+          <p class="help">
+            A family of friend also wants to attend? They would need to submit a RSVP form as well! One RSVP per person, please!
+          </p>
+          
           <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
           <button id="submitButton" type="submit">Submit RSVP</button>
         </form>
