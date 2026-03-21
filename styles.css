@@ -173,6 +173,14 @@ ol {
   padding-left: 20px;
 }
 
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
 @media (max-width: 700px) {
   .two-up {
     grid-template-columns: 1fr;
