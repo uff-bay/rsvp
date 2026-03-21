@@ -40,9 +40,7 @@
       return;
     }
 
-    const email2 = form.email.value.trim().toLowerCase();
-
-    if (isBlockedEmail(email2)) {
+    if (isBlockedEmail(email)) {
       event.preventDefault();
       formMessage.textContent = 'School email addresses are not allowed. Please use a personal email.';
       form.email.focus();
