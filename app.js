@@ -111,12 +111,12 @@
     }
 
     statusBanner.className = 'status-banner waitlist';
-    statusBanner.textContent = `All guaranteed spots are currently full. New RSVPs will join the waitlist. Current waitlist size: ${waitlistCount}.`;
+    statusBanner.textContent = `All guaranteed spots are currently full. You will join the waitlist. Current waitlist size: ${waitlistCount}.`;
   }
 
   function showLoadError() {
     statusBanner.className = 'status-banner';
-    statusBanner.textContent = 'Could not load live availability right now. You can still submit the form.';
+    statusBanner.textContent = 'RSVP to plant trees with Urban Forest Friends!';
   }
 
   function isBlockedEmail(email) {
