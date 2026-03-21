@@ -9,6 +9,10 @@
   const waiverA = document.getElementById('waiverA');
   const waiverB = document.getElementById('waiverB');
   const coordinatorEmail = document.getElementById('coordinatorEmail');
+  const BLOCKED_EMAIL_DOMAINS = [
+    'newarkunified.org',
+    'fusdk12.net'
+  ];
 
   if (!form) {
     return;
@@ -33,6 +37,15 @@
       event.preventDefault();
       formMessage.textContent = 'Your email address and confirmation email address must match.';
       form.email_confirm.focus();
+      return;
+    }
+
+    const email = form.email.value.trim().toLowerCase();
+
+    if (isBlockedEmail(email)) {
+      event.preventDefault();
+      formMessage.textContent = 'School email addresses are not allowed. Please use a personal email.';
+      form.email.focus();
       return;
     }
 
@@ -106,5 +119,10 @@
   function showLoadError() {
     statusBanner.className = 'status-banner';
     statusBanner.textContent = 'Could not load live availability right now. You can still submit the form.';
+  }
+
+  function isBlockedEmail(email) {
+    const domain = email.split('@')[1]?.toLowerCase();
+    return BLOCKED_EMAIL_DOMAINS.includes(domain);
   }
 })();
